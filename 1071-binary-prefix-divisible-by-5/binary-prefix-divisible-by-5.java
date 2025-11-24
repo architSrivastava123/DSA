@@ -5,7 +5,7 @@ class Solution {
          
         for(int num : nums){
             curr = (curr*2+num)%5;
-            ans.add((curr%5) == 0);
+            ans.add((curr) == 0);
         }
         return ans;
     }
