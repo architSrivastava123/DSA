@@ -4,8 +4,9 @@ class Solution {
          k = k % n;
 
         reversee(nums, 0 , n-1);
-        reversee(nums, 0 , k-1);
         reversee(nums, k , n-1);
+        reversee(nums, 0 , k-1);
+        
     }
     void reversee(int nums[] , int i , int j){
         while(i<j){
