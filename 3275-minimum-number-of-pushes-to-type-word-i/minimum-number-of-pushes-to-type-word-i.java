@@ -1,7 +1,10 @@
 class Solution {
     public int minimumPushes(String word) {
-    int arr[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20, 22, 24,27, 30, 33, 36, 39, 42, 45, 48,52, 56};
-    return arr[word.length()];
+       int count=0;
+    for(int i = 0; i< word.length(); i++){
+        count += (i / 8) + 1;
+      }
+        return count;
     
     }
 }
