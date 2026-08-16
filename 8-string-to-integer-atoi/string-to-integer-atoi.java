@@ -2,6 +2,9 @@ class Solution {
     public int myAtoi(String s) {
         s = s.trim();
         int n = s.length();
+         if (s == null || s.length() == 0) {
+            return 0;
+        }
         if(s.isEmpty()){
             return 0;
         }
