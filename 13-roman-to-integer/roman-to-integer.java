@@ -1,22 +1,20 @@
 class Solution {
     public int romanToInt(String s) {
-        int ans = 0;
-        int val = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            val = getValue(s.charAt(i));
-
-            if (i + 1 < s.length() && val < getValue(s.charAt(i + 1))) {
-                ans -= val;
-            } else {
-                ans += val;
+        int vasl =0;
+        int sum =0;
+        for(int i =0; i<s.length(); i++){
+            vasl = value(s.charAt(i));
+            if( i+1 < s.length() && vasl < value(s.charAt(i+1))){
+                sum -= vasl;
+            }
+            else{
+                sum+= vasl; 
             }
         }
-        return ans;
+        return sum;
     }
-
-    private int getValue(char c) {
-        switch (c) {
+    private int value(char s){
+        switch (s){
             case 'I': return 1;
             case 'V': return 5;
             case 'X': return 10;
@@ -25,7 +23,6 @@ class Solution {
             case 'D': return 500;
             case 'M': return 1000;
         }
-
         return 0;
     }
 }
