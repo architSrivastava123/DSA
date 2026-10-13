@@ -9,10 +9,6 @@ class Solution {
             sum  = sum*10 + (n%10);
             n/=10; 
          }
-         if (sum == x){
-            return true;
-         }
-
-        return false;
+        return sum == x;
     }
 }
